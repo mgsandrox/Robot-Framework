@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.12.6 on win32)" generated="2025-04-08T15:32:47.514049" rpa="false" schemaversion="5">
+<suite id="s1" name="Teste" source="T:\estudos\Atividades Robot\Pessoal\teste.robot">
+<test id="s1-t1" name="Cenário 1 - Acessar o site e fazer login" line="48">
+<kw name="Abrir Navegador">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-04-08T15:32:47.944902" level="INFO">Opening browser 'firefox' to base url 'https://automationpratice.com.br/'.</msg>
+<arg>${Site_URL}</arg>
+<arg>firefox</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-04-08T15:32:47.944902" elapsed="13.760392"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-04-08T15:33:01.705294" elapsed="0.304475"/>
+</kw>
+<status status="PASS" start="2025-04-08T15:32:47.944902" elapsed="14.064867"/>
+</kw>
+<kw name="Timer">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-08T15:33:05.011434" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-08T15:33:02.010865" elapsed="3.000569"/>
+</kw>
+<status status="PASS" start="2025-04-08T15:33:02.010865" elapsed="3.000569"/>
+</kw>
+<kw name="Clicar em login">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-08T15:33:05.012996" level="INFO">Clicking element 'xpath=//a[@href="/login"]'.</msg>
+<arg>${login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-08T15:33:05.012467" elapsed="0.286837"/>
+</kw>
+<status status="PASS" start="2025-04-08T15:33:05.011434" elapsed="0.287870"/>
+</kw>
+<kw name="Timer">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-08T15:33:08.300938" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-08T15:33:05.299304" elapsed="3.001634"/>
+</kw>
+<status status="PASS" start="2025-04-08T15:33:05.299304" elapsed="3.001634"/>
+</kw>
+<kw name="Inserir o usuário e senha">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-08T15:33:08.301990" level="INFO">Typing text 'qazando@teste.com' into text field 'xpath=//input[@id="user"]'.</msg>
+<arg>xpath=//input[@id="user"]</arg>
+<arg>${user}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-08T15:33:08.301990" elapsed="0.085329"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-08T15:33:08.388472" level="INFO">Typing text '123456' into text field 'xpath=//input[@id="password"]'.</msg>
+<arg>xpath=//input[@id="password"]</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-08T15:33:08.387319" elapsed="0.026654"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-08T15:33:08.413973" level="INFO">Clicking element 'xpath=//button[@id="btnLogin"]'.</msg>
+<arg>xpath=//button[@id="btnLogin"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-08T15:33:08.413973" elapsed="0.261447"/>
+</kw>
+<status status="PASS" start="2025-04-08T15:33:08.300938" elapsed="0.374482"/>
+</kw>
+<kw name="Timer">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-08T15:33:11.676798" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-08T15:33:08.676464" elapsed="3.000334"/>
+</kw>
+<status status="PASS" start="2025-04-08T15:33:08.675420" elapsed="3.001378"/>
+</kw>
+<kw name="Verificação de texto alert">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<msg time="2025-04-08T15:33:11.678469" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<msg time="2025-04-08T15:33:16.794139" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-04-08T15:33:16.795207" level="FAIL">Alert not found in 5 seconds.</msg>
+<arg>//div[@id="swal2-html-container"]</arg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="FAIL" start="2025-04-08T15:33:11.677934" elapsed="5.324370">Alert not found in 5 seconds.</status>
+</kw>
+<msg time="2025-04-08T15:33:17.002304" level="INFO">${visivel} = False</msg>
+<var>${visivel}</var>
+<arg>Alert Should Be Present</arg>
+<arg>//div[@id="swal2-html-container"]</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-04-08T15:33:11.677934" elapsed="5.324370"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>v:${visivel}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-04-08T15:33:17.003309" elapsed="0.000509"/>
+</kw>
+<if>
+<branch type="IF" condition="${visivel}">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>O elemento está visível.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2025-04-08T15:33:17.003818" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2025-04-08T15:33:17.003818" elapsed="0.000000"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>O elemento não está visível.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-04-08T15:33:17.004851" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-04-08T15:33:17.003818" elapsed="0.001033"/>
+</branch>
+<status status="PASS" start="2025-04-08T15:33:17.003818" elapsed="0.001033"/>
+</if>
+<status status="PASS" start="2025-04-08T15:33:11.677934" elapsed="5.326917"/>
+</kw>
+<kw name="Timer">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-08T15:33:20.006465" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-08T15:33:17.005856" elapsed="3.000609"/>
+</kw>
+<status status="PASS" start="2025-04-08T15:33:17.005856" elapsed="3.000609"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-04-08T15:33:20.006465" elapsed="2.862673"/>
+</kw>
+<tag>Suite1</tag>
+<status status="PASS" start="2025-04-08T15:32:47.943869" elapsed="34.926312"/>
+</test>
+<status status="PASS" start="2025-04-08T15:32:47.516556" elapsed="35.354624"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">Suite1</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Teste">Teste</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

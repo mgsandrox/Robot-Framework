@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.12.6 on win32)" generated="2025-04-07T15:34:46.423708" rpa="false" schemaversion="5">
+<suite id="s1" name="Teste" source="T:\estudos\Atividades Robot\Pessoal\teste.robot">
+<test id="s1-t1" name="Cenário 1 - Acessar o site e fazer login" line="31">
+<kw name="Abrir Navegador">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-04-07T15:34:46.700434" level="INFO">Opening browser 'edge' to base url 'https://automationpratice.com.br/'.</msg>
+<arg>${Site_URL}</arg>
+<arg>edge</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-04-07T15:34:46.699667" elapsed="3.332753"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-04-07T15:34:50.032420" elapsed="0.214066"/>
+</kw>
+<status status="PASS" start="2025-04-07T15:34:46.699161" elapsed="3.548508"/>
+</kw>
+<kw name="Timer">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-07T15:34:53.248856" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-07T15:34:50.248688" elapsed="3.000168"/>
+</kw>
+<status status="PASS" start="2025-04-07T15:34:50.247669" elapsed="3.001187"/>
+</kw>
+<kw name="Clicar em login">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-07T15:34:53.251879" level="INFO">Clicking element 'xpath=//a[@href="/login"]'.</msg>
+<arg>${login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-07T15:34:53.250341" elapsed="0.113447"/>
+</kw>
+<status status="PASS" start="2025-04-07T15:34:53.250341" elapsed="0.113447"/>
+</kw>
+<kw name="Timer">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-07T15:34:56.365307" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-07T15:34:53.364880" elapsed="3.000427"/>
+</kw>
+<status status="PASS" start="2025-04-07T15:34:53.364880" elapsed="3.000427"/>
+</kw>
+<kw name="Inserir o usuário e senha">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-07T15:34:56.367097" level="INFO">Typing text 'qazando@teste.com' into text field 'xpath=//input[@id="user"]'.</msg>
+<arg>xpath=//input[@id="user"]</arg>
+<arg>${user}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-07T15:34:56.367097" elapsed="0.150062"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-07T15:34:56.518195" level="INFO">Typing text '123456' into text field 'xpath=//input[@id="password"]'.</msg>
+<arg>xpath=//input[@id="password"]</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-07T15:34:56.517159" elapsed="0.098787"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-07T15:34:56.615946" level="INFO">Clicking element 'xpath=//button[@id="btnLogin"]'.</msg>
+<arg>xpath=//button[@id="btnLogin"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-07T15:34:56.615946" elapsed="0.095724"/>
+</kw>
+<status status="PASS" start="2025-04-07T15:34:56.366322" elapsed="0.346366"/>
+</kw>
+<kw name="Timer">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-07T15:34:59.714034" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-07T15:34:56.713683" elapsed="3.000351"/>
+</kw>
+<status status="PASS" start="2025-04-07T15:34:56.712688" elapsed="3.001346"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-04-07T15:34:59.715094" elapsed="2.257579"/>
+</kw>
+<status status="PASS" start="2025-04-07T15:34:46.697789" elapsed="15.276112"/>
+</test>
+<status status="PASS" start="2025-04-07T15:34:46.426260" elapsed="15.548992"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Teste">Teste</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
